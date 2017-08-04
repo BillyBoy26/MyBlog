@@ -6,6 +6,15 @@ from django.utils.text import Truncator
 from blog.models import Category, Article
 
 
+def duplicate(modeladmin, request, queryset):
+    for object in queryset:
+        object.id = None
+        object.save()
+
+
+duplicate.short_description = "Dupliquer les éléments selectionnés"
+
+
 class ArticleAdmin(admin.ModelAdmin):
     list_display = ('title', 'author', 'create_date', 'preview_content')
     list_filter = ('author', 'category')
@@ -25,6 +34,7 @@ class ArticleAdmin(admin.ModelAdmin):
             'fields': ('image',)
         })
     )
+    actions = [duplicate]
     prepopulated_fields = {'slug': ('title',)}
 
     def preview_content(self, article):
