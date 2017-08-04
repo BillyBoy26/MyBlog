@@ -15,13 +15,15 @@ class ArticleAdmin(admin.ModelAdmin):
 
     fieldsets = (
         ('Général', {
-            'classes': ['collapse', ],
             'fields': ('title', 'slug', 'author', 'category')
         }),
         ('Contenu de l\'article', {
             'description': 'Le formulaire accepte les balises HTML. Utilisez-les à bon escient.',
             'fields': ('content',)
         }),
+        ('Images', {
+            'fields': ('image',)
+        })
     )
     prepopulated_fields = {'slug': ('title',)}
 
