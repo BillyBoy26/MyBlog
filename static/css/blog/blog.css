@@ -42,7 +42,7 @@
     margin-top: 7px;
 }
 
-.mdl-layout__title{
+.mdl-layout__title {
     font-size: 14px;
     text-align: center;
     font-weight: 300;
@@ -54,17 +54,22 @@
 }
 
 .blog-navigation-row {
-    background-color: rgba(0,0,0,0.08);
+    background-color: rgba(0, 0, 0, 0.08);
     text-transform: uppercase;
     height: 45px;
     padding: 0;
     justify-content: center;
 }
 
-.blog-navigation-row .is-active {
-    position: relative;
+.is-active {
     font-weight: bold;
 }
+
+.blog-navigation-row .is-active {
+    position: relative;
+
+}
+
 .blog-navigation-row .mdl-navigation {
     text-align: center;
     max-width: 900px;
@@ -76,23 +81,23 @@
     line-height: 42px;
 }
 
-.blog-navigation-row .is-active:after{
+.blog-navigation-row .is-active:after {
     content: "";
     width: 70%;
     height: 2px;
     display: block;
     position: absolute;
     bottom: 0;
-    background-color: rgb(255,64,129);
+    background-color: rgb(255, 64, 129);
     left: 15%;
 }
 
 .mdl-layout__header-row .mdl-navigation__link {
-    color: rgb(66,66,66);
+    color: rgb(66, 66, 66);
 }
 
-.header-image .mdl-layout__drawer-button{
-    background-color: rgba(197,197,197,0.44);
+.header-image .mdl-layout__drawer-button {
+    background-color: rgba(197, 197, 197, 0.44);
 }
 
 @media screen and (max-width: 1024px) {
@@ -103,7 +108,7 @@
 
 .mdl-layout__header .mdl-layout__drawer-button {
     position: absolute;
-    color: rgb(66,66,66);
+    color: rgb(66, 66, 66);
 }
 
 

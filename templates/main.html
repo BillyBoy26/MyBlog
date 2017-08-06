@@ -2,6 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>{% block title %}Accueil{% endblock %}</title>
     <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Roboto:300,400,500,700" type="text/css">
     <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
@@ -22,23 +23,25 @@
                 </div>
                 <div class="mdl-layout__header-row mdl-layout--large-screen-only blog-navigation-row">
                     <nav class="mdl-navigation mdl-typography--body-1-force-preferred-font">
-                        <a class="mdl-navigation__link is-active" href="{% url 'accueil' %}">Portfolio</a>
-                        <a class="mdl-navigation__link" href="">A propos</a>
-                        <a class="mdl-navigation__link" href="{% url 'contact' %}">Contact</a>
+                        <a class="mdl-navigation__link  {% if nbar == 'home' %}is-active{% endif %}"
+                           href="{% url 'accueil' %}">Portfolio</a>
+                        <a class="mdl-navigation__link {% if nbar == 'about' %}is-active{% endif %}" href="">A
+                            propos</a>
+                        <a class="mdl-navigation__link  {% if nbar == 'contact' %}is-active{% endif %}"
+                           href="{% url 'contact' %}">Contact</a>
                     </nav>
                 </div>
-            </header>
+<            </header>
             <div class="mdl-layout__drawer mdl-layout--small-screen-only">
                 <nav class="mdl-navigation mdl-typography--body-1-force-preferred-font">
-                    <a class="mdl-navigation__link is-active" href="{% url 'accueil' %}">Portfolio</a>
-                    <a class="mdl-navigation__link" href="">A propos</a>
-                    <a class="mdl-navigation__link" href="{% url 'contact' %}">Contact</a>
+                    <a class="mdl-navigation__link {% if nbar == 'home' %}is-active{% endif %}" href="{% url 'accueil' %}">Portfolio</a>
+                    <a class="mdl-navigation__link {% if nbar == 'about' %}is-active{% endif %}" href="">A propos</a>
+                    <a class="mdl-navigation__link {% if nbar == 'contact' %}is-active{% endif %}" href="{% url 'contact' %}">Contact</a>
                 </nav>
-
             </div>
 
             <main class="mdl-layout__content">
-                {%  block content %}{% endblock %}
+                {% block content %}{% endblock %}
 
                 <footer class="mdl-mini-footer">
                     <div class="mdl-mini-footer__left-section">

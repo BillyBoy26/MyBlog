@@ -5,7 +5,8 @@ from .forms import ContactForm
 
 def accueil(request):
     articles = Article.objects.all()
-    return render(request, "blog/accueil.html", {"last_articles": articles})
+    return render(request, "blog/accueil.html", {"last_articles": articles,
+                                                 "nbar": "home"})
 
 
 def read_article(request, id_article, slug):
@@ -21,5 +22,6 @@ def contact(request):
         sender = form.cleaned_data['sender']
         resend = form.cleaned_data['resend']
         resend = True
-
-    return render(request, 'blog/contact.html', locals())
+    context = locals()
+    context["nbar"] = "contact"
+    return render(request, 'blog/contact.html', context)
