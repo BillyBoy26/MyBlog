@@ -11,7 +11,8 @@ def accueil(request):
 
 def read_article(request, id_article, slug):
     article = get_object_or_404(Article, id=id_article, slug=slug)
-    return render(request, "blog/read_article.html", {"article": article})
+    return render(request, "blog/read_article.html", {"article": article,
+                                                      "nbar": "home"})
 
 
 def contact(request):

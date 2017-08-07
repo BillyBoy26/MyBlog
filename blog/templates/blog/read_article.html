@@ -1,18 +1,21 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>{{ article.title }}</title>
-</head>
-<body>
-    <h1>
-        {{ article.title }} <span class="small"> dans {{ article.category.name }}</span>
-    </h1>
-    <p class="infos">
-        Rédigé par {{ article.author }}, le {{ article.create_date|date:"DATE_FORMAT" }}
-    </p>
-    <div class="contenu">
-        {{ article.content|linebreaks }}
+{% extends 'main.html' %}
+{% block title %}{{ article.title }} {% endblock %}
+{% block content %}
+    <div class="mdl-grid blog-max-width">
+        <div class="mdl-cell mdl-cell--12-col mdl-card mdl-shadow--4dp">
+            <div class="mdl-card__title">
+                <h2 class="mdl-card__title-text">{{ article.title }}</h2>
+            </div>
+            <div class="mdl-card__media">
+                <img class="article-image" src="{{ article.image.url }}"/>
+            </div>
+
+            <div class="mdl-card__supporting-text">
+                Rédigé par {{ article.author }}, le {{ article.create_date|date:"DATE_FORMAT" }}
+            </div>
+            <div class="mdl-grid article-content">
+                {{ article.content|linebreaks }}
+            </div>
+        </div>
     </div>
-</body>
-</html>
+{% endblock %}
