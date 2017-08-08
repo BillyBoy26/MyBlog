@@ -25,18 +25,22 @@
                     <nav class="mdl-navigation mdl-typography--body-1-force-preferred-font">
                         <a class="mdl-navigation__link  {% if nbar == 'home' %}is-active{% endif %}"
                            href="{% url 'accueil' %}">Portfolio</a>
-                        <a class="mdl-navigation__link {% if nbar == 'about' %}is-active{% endif %}" href="">A
+                        <a class="mdl-navigation__link {% if nbar == 'about' %}is-active{% endif %}"
+                           href="{% url 'about' %}">A
                             propos</a>
                         <a class="mdl-navigation__link  {% if nbar == 'contact' %}is-active{% endif %}"
                            href="{% url 'contact' %}">Contact</a>
                     </nav>
                 </div>
-<            </header>
+                <
+            </header>
             <div class="mdl-layout__drawer mdl-layout--small-screen-only">
                 <nav class="mdl-navigation mdl-typography--body-1-force-preferred-font">
-                    <a class="mdl-navigation__link {% if nbar == 'home' %}is-active{% endif %}" href="{% url 'accueil' %}">Portfolio</a>
+                    <a class="mdl-navigation__link {% if nbar == 'home' %}is-active{% endif %}"
+                       href="{% url 'accueil' %}">Portfolio</a>
                     <a class="mdl-navigation__link {% if nbar == 'about' %}is-active{% endif %}" href="">A propos</a>
-                    <a class="mdl-navigation__link {% if nbar == 'contact' %}is-active{% endif %}" href="{% url 'contact' %}">Contact</a>
+                    <a class="mdl-navigation__link {% if nbar == 'contact' %}is-active{% endif %}"
+                       href="{% url 'contact' %}">Contact</a>
                 </nav>
             </div>
 

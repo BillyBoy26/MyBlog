@@ -15,6 +15,10 @@ def read_article(request, id_article, slug):
                                                       "nbar": "home"})
 
 
+def about(request):
+    return render(request, 'blog/about.html', {"nbar": "about"})
+
+
 def contact(request):
     form = ContactForm(request.POST or None)
     if form.is_valid():

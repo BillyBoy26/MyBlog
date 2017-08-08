@@ -1,0 +1,42 @@
+{% extends 'main.html' %}
+{% load static %}
+{% block title %}A propos {% endblock %}
+{% block content %}
+    <div class="mdl-grid blog-max-width">
+        <div class="mdl-cell mdl-cell--12-col mdl-shadow--4dp">
+            <div class="mdl-card__title">
+                <h2 class="mdl-card__title-text">A propos</h2>
+            </div>
+            <div class="mdl-card__media">
+                <img src="{% static 'images/about.jpg' %}" alt="A propos" class="about-image" border="0"/>
+            </div>
+            <div class="mdl-grid about-maxwidth">
+                <h3 class="mdl-cell mdl-cell--12-col mdl-typography--headline">Introduction</h3>
+                <div class="mdl-cell mdl-cell--8-col mdl-card__supporting-text no-padding">
+                    <p>
+                        Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque
+                        laudantium,
+                        totam
+                        rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta
+                        sunt
+                        explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia
+                        consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est,
+                        qui
+                        dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi
+                        tempora
+                        incidunt ut labore et dolore magnam aliquam quaerat voluptatem. Ut enim ad minima veniam, quis
+                        nostrum
+                        exercitationem ullam corporis suscipit laboriosam, nisi ut aliquid ex ea commodi consequatur?
+                        Quis
+                        autem
+                        vel eum iure reprehenderit qui in ea voluptate velit esse quam nihil molestiae consequatur, vel
+                        illum
+                        qui dolorem eum fugiat quo voluptas nulla pariatur?
+                    </p>
+                </div>
+
+            </div>
+        </div>
+
+    </div>
+{% endblock %}
