@@ -3,6 +3,7 @@ from django.contrib import admin
 # Register your models here.
 from django.utils.text import Truncator
 
+from blog.forms import ArticleForm
 from blog.models import Category, Article
 
 
@@ -22,20 +23,9 @@ class ArticleAdmin(admin.ModelAdmin):
     ordering = ('create_date',)
     search_fields = ('title', 'contenu')
 
-    fieldsets = (
-        ('Général', {
-            'fields': ('title', 'slug', 'author', 'category')
-        }),
-        ('Contenu de l\'article', {
-            'description': 'Le formulaire accepte les balises HTML. Utilisez-les à bon escient.',
-            'fields': ('content',)
-        }),
-        ('Images', {
-            'fields': ('image',)
-        })
-    )
     actions = [duplicate]
     prepopulated_fields = {'slug': ('title',)}
+    form = ArticleForm
 
     def preview_content(self, article):
         return Truncator(article.content).chars(40, truncate='...')

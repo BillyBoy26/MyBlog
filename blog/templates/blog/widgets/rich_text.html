@@ -1,0 +1,23 @@
+{% load static %}
+<link rel="stylesheet" href="{% static 'css/blog/richText.css' %}">
+<table>
+    <tr>
+        <td>
+            <div class="button-panel">
+                <a id="rt-title" class="link-as-button">
+                    Titre
+                </a>
+                <a id="rt-content" class="link-as-button">
+                    Contenu
+                </a>
+                <a id="rt-image" class="link-as-button">
+                    Image
+                </a>
+            </div>
+        </td>
+    </tr>
+    <tr><td>{{ textAreaHtml }}</td></tr>
+
+</table>
+
+<script src="{% static 'js/richText.js' %}"></script>

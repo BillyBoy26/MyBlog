@@ -1,0 +1,17 @@
+.link-as-button {
+    display: block;
+    width: 80px;
+    height: 20px;
+    background: #79aec8;
+    padding: 2px;
+    text-align: center;
+    border-radius: 4px;
+    color: white;
+    margin:3px;
+    cursor: pointer;
+}
+
+.button-panel {
+    display: flex;
+
+}

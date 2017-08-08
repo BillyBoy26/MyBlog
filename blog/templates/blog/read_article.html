@@ -14,7 +14,7 @@
                 Rédigé par {{ article.author }}, le {{ article.create_date|date:"DATE_FORMAT" }}
             </div>
             <div class="mdl-grid article-content">
-                {{ article.content|linebreaks }}
+                {{ article.content|safe |linebreaks }}
             </div>
         </div>
     </div>
