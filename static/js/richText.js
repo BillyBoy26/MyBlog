@@ -20,8 +20,8 @@ document.getElementById('rt-content').onclick = function () {
    }
 };
 document.getElementById('rt-image').onclick = function () {
-   if(selectedText.length > 0){
-       var titledText = "<h3>" + selectedText + "</h3>"
-       textarea.value = textarea.value.replace(selectedText, titledText);
-   }
+    var contentImage = "<div class='mdl-cell mdl-cell--6-col'>" +
+        "<img class='article-image' src='' border='0' /> " +
+        "</div>";
+    textarea.value = textarea.value.substring(0, textarea.selectionStart) + contentImage + textarea.value.substring(textarea.selectionStart, textarea.value.length);
 };
