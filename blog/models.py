@@ -6,6 +6,7 @@ class Article(models.Model):
     title = models.CharField(max_length=100)
     author = models.CharField(max_length=50)
     slug = models.CharField(max_length=100)
+    description = models.TextField(max_length=100)
     content = models.TextField(null=True)
     create_date = models.DateField(auto_now_add=True, auto_now=False, verbose_name='Date de création')
     category = models.ForeignKey("Category")
