@@ -15,7 +15,7 @@ document.getElementById('rt-title').onclick = function () {
 };
 document.getElementById('rt-content').onclick = function () {
    if(selectedText.length > 0){
-       var contentText = "<div class='mdl-cell mdl-cell--6-col mdl-card__supporting-text no-padding'>" + selectedText + "</div>"
+       var contentText = "<div class='mdl-cell mdl-cell--6-col mdl-card__supporting-text no-padding'><p>" + selectedText + "</p></div>"
        textarea.value = textarea.value.replace(selectedText, contentText);
    }
 };
